@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+
 class ProductController extends Controller
 {
     public function index()
     {
-        return [
-            ['id' => 1, 'name' => 'Product 1', 'price' => 100],
-            ['id' => 2, 'name' => 'Product 2', 'price' => 200],
-        ];
+        return Product::all();
     }
 }
