@@ -6,3 +6,5 @@ use App\Http\Controllers\OrderController;
 
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/orders', [OrderController::class, 'index']);
+
+Route::post('/products', [ProductController::class, 'store']);
