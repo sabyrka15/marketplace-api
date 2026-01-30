@@ -19,4 +19,11 @@ class ProductController extends Controller
             'price' => $request->price,
         ]);
     }
+
+    public function destroy($id)
+    {
+        Product::findOrFail($id)->delete();
+
+        return response()->json(['success' => true]);
+    }
 }
